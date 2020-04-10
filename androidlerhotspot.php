@@ -19,8 +19,8 @@ if(!$ret) {
 while($row = pg_fetch_row($ret)) {
    $hotspot = array();
    $hotspot["id"] = $row[0];
-   $hotspot["nome"] = $row[1];
-   $hotspot["imagem"] = $row[2];
+   $hotspot["nome"] = $row[2];
+   $hotspot["imagem"] = $row[1];
    $hotspot["latitude"] = $row[3];
    $hotspot["longitude"] = $row[4];
    array_push($response["hotspot"], $hotspot);
