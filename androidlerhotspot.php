@@ -8,7 +8,7 @@ $db = pg_connect( "$host $port $dbname $credentials"  );
 $idcidade = $_GET['id'];
 
 $sql =<<<EOF
-   SELECT * from urban.hotspot where idcidade = $idcidade order by idhotspot ;
+   SELECT * from urban.hotspot where idcidade = $idcidade order by idhotspot;
 EOF;
 $ret = pg_query($db, $sql);
 if(!$ret) {
