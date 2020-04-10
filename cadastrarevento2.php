@@ -31,6 +31,7 @@ EOF;
       echo pg_last_error($db);
    } else {
       echo "Records created successfully\n";
+      header('Location: lista.php');
    }
    pg_close($db);
 ?>

@@ -23,6 +23,8 @@ EOF;
       echo pg_last_error($db);
    } else {
       echo "Records created successfully\n";
+       header('Location: listahotspots.php?id='.$idcidade);
+
    }
    pg_close($db);
 ?>

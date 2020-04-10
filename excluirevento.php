@@ -12,4 +12,5 @@ EOF;
       exit;
    } else {
       echo "Record deleted successfully\n";
+      header('Location: lista.php');
    }

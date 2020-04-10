@@ -17,5 +17,6 @@ EOF;
       exit;
    } else {
       echo "Record updated successfully\n";
+      header('Location: lista.php');
    }
 ?>
