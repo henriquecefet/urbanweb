@@ -19,5 +19,7 @@ if(!$ret) {
      echo pg_last_error($db);
  exit;
 }
+$response = "sucesso";
+echo json_encode($response);
 pg_close($db);
 ?>
