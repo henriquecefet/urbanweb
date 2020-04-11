@@ -20,7 +20,6 @@ while($row = pg_fetch_row($ret)) {
    $cidade["imagem"] = $row[2];
    $cidade["latitude"] = $row[3];
    $cidade["longitude"] = $row[4];
-   $cidade["site"] = $row[5];
    array_push($response["cidades"], $cidade);
 }
 echo json_encode($response);
