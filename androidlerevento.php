@@ -22,8 +22,9 @@ while($row = pg_fetch_row($ret)) {
    $eventohotspot["nome"] = $row[2];
    $eventohotspot["imagem"] = $row[1];
    $eventohotspot["site"] = $row[4];
-   array_push($response["evento"], eventohotspot);
+   array_push($response["evento"], $eventohotspot);
 }
 echo json_encode($response);
 pg_close($db);
 ?>
+
