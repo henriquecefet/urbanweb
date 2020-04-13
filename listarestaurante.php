@@ -37,6 +37,7 @@ EOF;
       echo "LATITUDE = ". $row[2] ."\n". "<br>";
       echo "LONGITUDE =  ".$row[3] ."\n\n". "<br>";
       echo "<a href='editarrestaurante.php?id= $row[0]'>Editar Restaurante</a>". "<br>";
+      echo "<a href='deletarrestaurante.php?id= $row[0]'>Deletar Restaurante</a>". "<br>";
    }
    echo "Operation done successfully\n". "<br>";
    pg_close($db);
