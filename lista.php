@@ -39,11 +39,19 @@ EOF;
       echo "<a href='editarcidade.php?id= $row[0]'>Editar Cidade</a>". "<br>";
       echo "<a href='listarestaurante.php?id= $row[0]'>Lista de Restaurantes</a>". "<br>";
       echo "<a href='cadastrorestaurante.php?id= $row[0]'>Cadastro de Restaurantes</a>". "<br>";
-      echo "<a href='deletarcidade.php?id= $row[0]'>Deletar Cidade e seus Hotspots</a>". "<br>";
+      echo "<a href='#' onclick='overlay(deletarcidade.php?id= $row[0])'>Deletar Cidade e seus Hotspots</a>". "<br>";
    }
    echo "Operation done successfully\n". "<br>";
    pg_close($db);
 ?>
 </div>
+<script>
+    function overlay(link) {
+        var resultado = confirm("Você realmente quer apagar esta cidade?");
+        if(resultado){
+            window.location.href = link;
+        }
+   }
+</script>
   </body>
 </html>
