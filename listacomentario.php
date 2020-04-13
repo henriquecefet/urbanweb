@@ -42,7 +42,6 @@ while($row = pg_fetch_row($ret)) {
   echo "MENSAGEM = ". $row[3] ."\n". "<br>";
   echo "<a href='excluircomentario.php?id= $row[0]'>Excluir Comentario</a>". "<br>";
 }
-echo json_encode($response);
 pg_close($db);
 ?>
 </div>
