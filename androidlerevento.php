@@ -27,4 +27,3 @@ while($row = pg_fetch_row($ret)) {
 echo json_encode($response);
 pg_close($db);
 ?>
-
