@@ -41,6 +41,7 @@ EOF;
       echo "<a href='cadastrarevento.php?id= $row[0]'>Cadastrar Evento</a>". "<br>";
       echo "<a href='listaevento.php?id= $row[0]'>Lista de Evento</a>". "<br>";
       echo "<a href='deletarhotspot.php?id= $row[0]'>Deletar Hotspot</a>". "<br>";
+      echo "<a href='listacomentario.php?id= $row[0]'>Lista de Comentarios</a>". "<br>";
    }
    echo "Operation done successfully\n". "<br>";
    pg_close($db);
