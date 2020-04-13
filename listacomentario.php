@@ -40,7 +40,6 @@ while($row = pg_fetch_row($ret)) {
   echo "<img src='$row[2]' style='max-height: 140px;max-width:130px;'>". "<br>";
   echo "NOME = ". $row[1] ."\n". "<br>";
   echo "MENSAGEM = ". $row[3] ."\n". "<br>";
-  echo "<a href='excluircomentario.php?id= $row[0]'>Excluir Comentario</a>". "<br>";
 }
 pg_close($db);
 ?>
