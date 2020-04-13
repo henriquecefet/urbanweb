@@ -25,11 +25,15 @@ EOF;
               $podedeletar = false;
             }
             if($podedeletar){
-              $sq3 =<<<EOF
+              $sql3 =<<<EOF
                  DELETE from urban.evento where idevento = $row[0];
 EOF;
               $num++;
-
+              $ret3 = pg_query($db, $sql3);
+              if(!$ret3) {
+                echo pg_last_error($db);
+                exit;
+              }
             }
 
 
