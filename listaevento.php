@@ -35,6 +35,7 @@ EOF;
       echo "ID = ". $row[0] . "\n". "<br>";
       echo "NOME = ". $row[2] ."\n". "<br>";
       echo "SITE = ". "<a href='$row[4]'>$row[4]</a>"."\n". "<br>";
+      echo "<a href='editarevento.php?id= $row[0]'>Editar Evento</a>". "<br>";
       echo "<a href='excluirevento.php?id= $row[0]'>Excluir Evento</a>". "<br>";
 
    }
