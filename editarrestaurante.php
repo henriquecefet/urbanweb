@@ -42,7 +42,7 @@ EOF;
                          echo "<input type='text' name='latitude' id='latitude' value='$row[2]'><br>";
                          echo "<p>Longitude:</p><br>";
                          echo "<input type='text' name='longitude' id='longitude' value='$row[3]'><br>";
-                         echo "<input type='hidden' value=' $idrestaurante' name='idhotspot' id='idhotspot'>";
+                         echo "<input type='hidden' value=' $idrestaurante' name='idrestaurante' id='idrestaurante'>";
 
 
                          break;
