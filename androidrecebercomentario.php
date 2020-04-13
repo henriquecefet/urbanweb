@@ -10,8 +10,8 @@ $foto = $_GET['foto'];
 $mensagem = $_GET['mensagem'];
 $idhotspot = $_GET['idhotspot'];
 $sql =<<<EOF
-   INSERT INTO urban.comentario(username ,foto ,mensagem, idhotspot, idcomentario)
-   VALUES ('$username', '$foto', '$mensagem', $idhotspot, nextval(idcomentario));
+   INSERT INTO urban.comentario(username ,foto ,mensagem, idhotspot)
+   VALUES ('$username', '$foto', '$mensagem', $idhotspot);
 
 EOF;
 $ret = pg_query($db, $sql);
