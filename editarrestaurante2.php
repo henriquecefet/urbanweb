@@ -8,7 +8,7 @@ include("conexao.php");
    $longitude = $_REQUEST["longitude"];
    $imagem = $_REQUEST["linkimagem"];
    $sql =<<<EOF
-      UPDATE urban.restaurante set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem',  where idrestaurante= $idrestaurante;
+      UPDATE urban.restaurante set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem' where idrestaurante= $idrestaurante;
 EOF;
    $ret = pg_query($db, $sql);
    if(!$ret) {
