@@ -15,13 +15,13 @@ include("conexao.php");
 <body>
 <div class="jumbotron text-center">
   <h1>Urban Explorer</h1>
-  <p>Cadastro de Cidade</p>
+  <p>Editar Hotspot</p>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-          <h3>Editar Cidade</h3>
+          <h3>Editar Hotspot</h3>
                 <form action="editarhotspot2.php" method="post">
                   <?php
                          $idhotspot = $_GET['id'];
@@ -35,9 +35,9 @@ EOF;
                       }
                       while($row = pg_fetch_row($ret)) {
                          echo "<p>Link da imagem:</p><br>";
-                         echo "<input type='text' name='linkimagem' id='linkimagem' value='$row[2]'><br>";
+                         echo "<input type='text' name='linkimagem' id='linkimagem' value='$row[1]'><br>";
                          echo "<p>Nome:</p><br>";
-                         echo "<input type='text' name='nome' id='nome' value='$row[1]'><br>";
+                         echo "<input type='text' name='nome' id='nome' value='$row[2]'><br>";
                          echo "<p>Latitude:</p><br>";
                          echo "<input type='text' name='latitude' id='latitude' value='$row[3]'><br>";
                          echo "<p>Longitude:</p><br>";
