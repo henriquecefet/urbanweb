@@ -4,7 +4,7 @@ include("conexao.php");
 <?php
   $idrestaurante= $_GET['id'];
    $sql =<<<EOF
-      DELETE from urban.restaurante where idrestaurante = $  $idrestaurante;
+      DELETE from urban.restaurante where idrestaurante =  $idrestaurante;
 EOF;
  $ret = pg_query($db, $sql);
    if(!$ret) {
