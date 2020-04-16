@@ -29,7 +29,7 @@ include("max.php");
       <h3>Cadastro</h3>
       <form action="cadastro2.php" method="post">
         <p>ID:</p><br>
-        <input type="text" name="idcidade" id="idcidade" value="<?php maxId("urban.cidade", "idcidade")+1 ?>"><br>
+        <input type="text" name="idcidade" id="idcidade" value="<? maxId('urban.cidade', 'idcidade') ?>"><br>
         <p>Nome:</p><br>
         <input type="text" name="nome" id="nome" value=""><br>
         <p>Link da imagem:</p><br>
