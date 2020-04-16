@@ -4,7 +4,7 @@ if (!isset($_SESSION['conectado']))
 {
   header('Location: login.php');
 }
-
+include("max.php");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ if (!isset($_SESSION['conectado']))
       <h3>Cadastro</h3>
       <form action="cadastro2.php" method="post">
         <p>ID:</p><br>
-        <input type="text" name="idcidade" id="idcidade" value=""><br>
+        <input type="text" name="idcidade" id="idcidade" value="<? maxId("urban.cidade", "idcidade")+1 ?>"><br>
         <p>Nome:</p><br>
         <input type="text" name="nome" id="nome" value=""><br>
         <p>Link da imagem:</p><br>

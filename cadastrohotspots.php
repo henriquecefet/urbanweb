@@ -1,5 +1,6 @@
 <?php
 include("conexao.php");
+include("max.php");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@ include("conexao.php");
 <body>
 <div class="jumbotron text-center">
   <h1>Urban Explorer</h1>
-  <p>Cadastro de Cidade</p>
+  <p>Cadastro de Hotspots</p>
 </div>
 
 <div class="container">
@@ -24,7 +25,7 @@ include("conexao.php");
       <h3>Cadastro</h3>
       <form action="cadastrohotspots2.php" method="post">
         <p>ID:</p><br>
-        <input type="text" name="idhotspot" id="idhotspot" value=""><br>
+        <input type="text" name="idhotspot" id="idhotspot" value="<? maxId("urban.hotspot", "idhotspot")+1 ?>"><br>
         <p>Nome:</p><br>
         <input type="text" name="nome" id="nome" value=""><br>
         <p>Link da imagem:</p><br>
