@@ -5,6 +5,7 @@ if (!isset($_SESSION['conectado']))
   header('Location: login.php');
 }
 include("max.php");
+$id = maxId('urban.cidade', 'idcidade')+1;
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +30,7 @@ include("max.php");
       <h3>Cadastro</h3>
       <form action="cadastro2.php" method="post">
         <p>ID:</p><br>
-        <input type="text" name="idcidade" id="idcidade" value="<? maxId('urban.cidade', 'idcidade') ?>"><br>
+        <input type="text" name="idcidade" id="idcidade" value="<? $id ?>"><br>
         <p>Nome:</p><br>
         <input type="text" name="nome" id="nome" value=""><br>
         <p>Link da imagem:</p><br>
