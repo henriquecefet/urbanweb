@@ -29,7 +29,7 @@ EOF;
     exit;
    }
    while($row = pg_fetch_row($ret)) {
-     echo "<p background-color: #2F4F4F;>";
+     echo "<p style='background-color: #2F4F4F;''>";
       echo "<img src='$row[2]' style='max-height: 140px;max-width:130px;'>". "<br>";
       echo "ID = ". $row[0] . "\n". "<br>";
       echo "NOME = ". $row[1] ."\n". "<br>";
