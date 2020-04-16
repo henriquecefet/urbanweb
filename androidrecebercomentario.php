@@ -10,7 +10,7 @@ $username = $_GET['username'];
 $foto = $_GET['foto'];
 $mensagem = $_GET['mensagem'];
 $idhotspot = $_GET['idhotspot'];
-$maxId = maxId("urban.comentario", "idcomentario");
+$maxId = maxId("urban.comentario", "idcomentario") + 1;
 $sql =<<<EOF
    INSERT INTO urban.comentario(idcomentario, username ,foto ,mensagem, idhotspot)
    VALUES ($maxId, '$username', '$foto', '$mensagem', $idhotspot);
