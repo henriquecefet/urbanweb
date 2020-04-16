@@ -1,6 +1,7 @@
 <?php
 include("conexao.php");
 include("max.php");
+$id = maxId("urban.restaurante", "idrestaurante")+1;
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,9 @@ include("max.php");
       <h3>Cadastro de Restaurantes</h3>
       <form action="cadastrorestaurante2.php" method="post">
         <p>ID:</p><br>
-        <input type="text" name="idrestaurante" id="idrestaurante" value="<? maxId("urban.restaurante", "idrestaurante")+1 ?>"><br>
+        <?php
+          echo "<input type='text' name='idrestaurante' id='idrestaurante' value='$id'><br>";
+         ?>
         <p>Nome:</p><br>
         <input type="text" name="nome" id="nome" value=""><br>
         <p>Link da imagem:</p><br>

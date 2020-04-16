@@ -30,16 +30,16 @@ EOF;
    }
    while($row = pg_fetch_row($ret)) {
       echo "<img src='$row[2]' style='max-height: 140px;max-width:130px;'>". "<br>";
-      echo "ID = ". $row[0] . "\n". "<br>";
-      echo "NOME = ". $row[1] ."\n". "<br>";
-      echo "LATITUDE = ". $row[3] ."\n". "<br>";
-      echo "LONGITUDE =  ".$row[4] ."\n\n". "<br>";
-      echo "<a href='listahotspots.php?id= $row[0]'>Lista de Hotspots</a>". "<br>";
-      echo "<a href='cadastrohotspots.php?id= $row[0]'>Cadastro de Hotspots</a>". "<br>";
-      echo "<a href='editarcidade.php?id= $row[0]'>Editar Cidade</a>". "<br>";
-      echo "<a href='listarestaurante.php?id= $row[0]'>Lista de Restaurantes</a>". "<br>";
-      echo "<a href='cadastrorestaurante.php?id= $row[0]'>Cadastro de Restaurantes</a>". "<br>";
-      echo "<a href='deletarcidade.php?id= $row[0]'>Deletar Cidade e seus Hotspots</a>". "<br>";
+      echo "<p>ID = ". $row[0] . "\n". "</p><br>";
+      echo "<p>NOME = ". $row[1] ."\n". "</p><br>";
+      echo "<p>LATITUDE = ". $row[3] ."\n". "</p><br>";
+      echo "<p>LONGITUDE =  ".$row[4] ."\n\n". "</p><br>";
+      echo "<p><a href='listahotspots.php?id= $row[0]'>Lista de Hotspots</a>". "</p><br>";
+      echo "<p><a href='cadastrohotspots.php?id= $row[0]'>Cadastro de Hotspots</a>". "</p><br>";
+      echo "<p><a href='editarcidade.php?id= $row[0]'>Editar Cidade</a>". "<br>";
+      echo "<p><a href='listarestaurante.php?id= $row[0]'>Lista de Restaurantes</a>". "</p><br>";
+      echo "<p><a href='cadastrorestaurante.php?id= $row[0]'>Cadastro de Restaurantes</a>". "</p><br>";
+      echo "<p><a href='deletarcidade.php?id= $row[0]'>Deletar Cidade e seus Hotspots</a>". "</p><br>";
    }
    echo "Operation done successfully\n". "<br>";
    pg_close($db);
