@@ -6,6 +6,7 @@ if (!isset($_SESSION['conectado']))
 }
 include("max.php");
 $id = maxId('urban.cidade', 'idcidade')+1;
+echo "id: $id ";
  ?>
 <!DOCTYPE html>
 <html lang="en">
