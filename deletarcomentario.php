@@ -4,7 +4,7 @@ include("conexao.php");
 <?php
   $idhcomentario = $_GET['id'];
    $sql =<<<EOF
-      DELETE from urban.comentario where idhcomentario = $idcomentari;
+      DELETE from urban.comentario where idhcomentario = $idcomentario;
 EOF;
    $ret = pg_query($db, $sql);
    if(!$ret) {
