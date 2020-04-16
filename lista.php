@@ -34,7 +34,7 @@ EOF;
       echo "ID = ". $row[0] . "\n". "<br>";
       echo "NOME = ". $row[1] ."\n". "<br>";
       echo "LATITUDE = ". $row[3] ."\n". "<br>";
-      echo "LONGITUDE =  ".$row[4] ."\n\n". "</p><br>";
+      echo "LONGITUDE =  ".$row[4] ."\n\n". "<br>";
       echo "<a href='listahotspots.php?id= $row[0]'>Lista de Hotspots</a>". "<br>";
       echo "<a href='cadastrohotspots.php?id= $row[0]'>Cadastro de Hotspots</a>". "<br>";
       echo "<a href='editarcidade.php?id= $row[0]'>Editar Cidade</a>". "<br>";
