@@ -1,4 +1,5 @@
 <?php
+include("max.php");
 $host        = "host = ec2-52-23-14-156.compute-1.amazonaws.com";
 $port        = "port = 5432";
 $dbname      = "dbname = de04qoln4k3dbd";
@@ -9,10 +10,10 @@ $username = $_GET['username'];
 $foto = $_GET['foto'];
 $mensagem = $_GET['mensagem'];
 $idhotspot = $_GET['idhotspot'];
+$maxId = maxId("urban.comentario", "idcomentario");
 $sql =<<<EOF
-   INSERT INTO urban.comentario(username ,foto ,mensagem, idhotspot)
-   VALUES ('$username', '$foto', '$mensagem', $idhotspot);
-
+   INSERT INTO urban.comentario(idcomentario, username ,foto ,mensagem, idhotspot)
+   VALUES ($maxId, '$username', '$foto', '$mensagem', $idhotspot);
 EOF;
 $ret = pg_query($db, $sql);
 if(!$ret) {
