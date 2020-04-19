@@ -41,7 +41,7 @@ EOF;
                          echo "<p>Link:</p><br>";
                          echo "<input type='text' name='link' id='link' value='$row[4]'><br>";
                          echo "<input type='hidden' value='$idevento' name='idevento' id='idevento'>";
-                         echo "<input type='hidden' value='$idhotspot' name='idhotspot' id='idhotspot'>";
+                         echo "<input type='hidden' value='$row[3]' name='idhotspot' id='idhotspot'>";
 
                          break;
                       }
