@@ -45,7 +45,7 @@ EOF;
                          echo "<p>Site:</p><br>";
                          echo "<input type='text' name='site' id='site' value='$row[5]'><br>";
                          echo "<input type='hidden' value='$idhotspot' name='idhotspot' id='idhotspot'>";
-
+                         echo "<input type='hidden' value='$row[6]' name='idcidade' id='idcidade'>";
 
                          break;
                       }
