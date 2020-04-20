@@ -1,3 +1,3 @@
 function redirectIndex(){
-  window.Location.href = "index.php";
+  window.location.href = "index.php";
 }
