@@ -15,6 +15,6 @@ EOF;
       exit;
    } else {
       echo "Record updated successfully\n";
-      header('Location: listahotspots.php');
+      header('Location: lista.php');
    }
 ?>
