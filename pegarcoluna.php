@@ -1,5 +1,5 @@
 <?php
-function pegarId($tabela, $coluna, $nomeID, $id)
+function pegarColuna($tabela, $coluna, $nomeID, $id){
   $host        = "host = ec2-52-23-14-156.compute-1.amazonaws.com";
   $port        = "port = 5432";
   $dbname      = "dbname = de04qoln4k3dbd";
