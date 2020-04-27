@@ -1,8 +1,10 @@
 <?php
 include("conexao.php");
+include("max.php");
 ?>
 <?php
   $idrestaurante= $_GET['id'];
+  $idcidade = pegarId("urban.restaurante", "idcidade", $idrestaurante);
    $sql =<<<EOF
       DELETE from urban.restaurante where idrestaurante =  $idrestaurante;
 EOF;
@@ -12,5 +14,5 @@ EOF;
       exit;
    } else {
       echo "Record deleted successfully\n";
-      header('Location: lista.php');
+      header('Location: listarestaurante.php?id='.  $idcidade);
    }
