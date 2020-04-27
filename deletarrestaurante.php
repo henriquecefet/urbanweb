@@ -4,7 +4,7 @@ include("pegarcoluna.php");
 ?>
 <?php
   $idrestaurante= $_GET['id'];
-  $idcidade = pegarColuna("urban.restaurante", "idcidade", "idrestaurante" $idrestaurante);
+  $idcidade = pegarColuna("urban.restaurante", "idcidade", "idrestaurante", $idrestaurante);
    $sql =<<<EOF
       DELETE from urban.restaurante where idrestaurante =  $idrestaurante;
 EOF;
