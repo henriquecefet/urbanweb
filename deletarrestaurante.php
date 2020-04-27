@@ -14,5 +14,5 @@ EOF;
       exit;
    } else {
       echo "Record deleted successfully\n";
-      header('Location: lista.php?id='.$idcidade);
+      header('Location: listarestaurante.php?id='.$idcidade);
    }
