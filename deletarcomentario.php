@@ -1,8 +1,10 @@
 <?php
 include("conexao.php");
+include("pegarcoluna.php");
 ?>
 <?php
   $idcomentario = $_GET['id'];
+  $idhotspot = pegarColuna("urban.comentario", "idhotspot", "idcomentario", $idcomentario);
    $sql =<<<EOF
       DELETE from urban.comentario where idcomentario = $idcomentario;
 EOF;
@@ -12,5 +14,5 @@ EOF;
       exit;
    } else {
       echo "Record deleted successfully\n";
-      header('Location: lista.php');
+      header('Location: listacomentario.php?id='.$idhotspot);
    }
