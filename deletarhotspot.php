@@ -14,7 +14,7 @@ EOF;
 EOF;
 $ret2 = pg_query($db, $sql2);
 
-   if(!$ret) {
+   if(!$ret2 && !$ret) {
       echo pg_last_error($db);
       exit;
    } else {
