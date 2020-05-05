@@ -10,7 +10,7 @@ EOF;
    $sql2 =<<<EOF
       DELETE from urban.hotspot where idcidade = $idcidade;
 EOF;
- $ret2 = pg_query($db, $sql);
+ $ret2 = pg_query($db, $sql2);
    if(!$ret2) {
       echo pg_last_error($db);
       exit;
