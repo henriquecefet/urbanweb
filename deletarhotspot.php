@@ -3,6 +3,7 @@ include("conexao.php");
 include("pegarcoluna.php");
 ?>
 <?php
+  echo "começando ";
   $idhotspot = $_GET['id'];
   $idcidade = pegarColuna("urban.hotspot", "idcidade", "idhotspot", $idhotspot);
    $sql =<<<EOF
@@ -15,10 +16,10 @@ EOF;
 $ret2 = pg_query($db, $sql2);
 
    if(!$ret2 || !$ret) {
+      echo "não foi";
       echo pg_last_error($db);
       exit;
    } else {
       echo "Record deleted successfully\n";
       header('Location: listahotspots.php?id='.$idcidade);
    }
-
