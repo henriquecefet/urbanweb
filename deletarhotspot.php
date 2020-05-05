@@ -14,10 +14,11 @@ EOF;
 EOF;
 $ret2 = pg_query($db, $sql2);
 
-   if(!$ret2 && !$ret) {
+   if(!$ret2 || !$ret) {
       echo pg_last_error($db);
       exit;
    } else {
       echo "Record deleted successfully\n";
       header('Location: listahotspots.php?id='.$idcidade);
    }
+
