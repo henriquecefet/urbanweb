@@ -1,4 +1,5 @@
 <?php
+include("verificarlogin.php");
 include("conexao.php");
  ?>
 <?php

@@ -1,12 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION['conectado']))
-{
-  header('Location: login.php');
-}
-
- ?>
-<?php
 $host        = "host = ec2-52-23-14-156.compute-1.amazonaws.com";
 $port        = "port = 5432";
 $dbname      = "dbname = de04qoln4k3dbd";

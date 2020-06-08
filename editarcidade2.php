@@ -1,5 +1,6 @@
 
 <?php
+include("verificarlogin.php");
 include("conexao.php");
    $idcidade = $_REQUEST["cidade"];
    $nome = $_REQUEST["nome"];

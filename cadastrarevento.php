@@ -1,4 +1,5 @@
 <?php
+include("verificarlogin.php");
 include("conexao.php");
 include("max.php");
 $id = maxId("urban.evento", "idevento")+1;
