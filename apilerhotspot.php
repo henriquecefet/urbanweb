@@ -22,6 +22,7 @@ while($row = pg_fetch_row($ret)) {
    $hotspot["longitude"] = $row[4];
    $hotspot["site"] = $row[5];
    $hotspot["idcidade"] = $row[6];
+   $hotspot["ar-livre"] = $row[7];
    array_push($response["hotspot"], $hotspot);
 }
 echo json_encode($response);
