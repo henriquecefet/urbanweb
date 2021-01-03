@@ -5,7 +5,7 @@ include("conexao.php");
 $nome = $_GET['nome'];
 
 $sql =<<<EOF
-   select urban.hotspot.*, urban.cidade.nome as "cidade" from urban.hotspot join urban.cidade on (urban.hotspot.idcidade = urban.cidade.idcidade and urban.hotspot.nome = $nome);
+   select urban.hotspot.*, urban.cidade.nome as "cidade" from urban.hotspot join urban.cidade on (urban.hotspot.idcidade = urban.cidade.idcidade and urban.hotspot.nome = '$nome');
 EOF;
 $ret = pg_query($db, $sql);
 if(!$ret) {
