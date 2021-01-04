@@ -27,5 +27,6 @@ while($row = pg_fetch_row($ret)) {
    array_push($response["hotspot"], $hotspot);
 }
 echo json_encode($response);
+echo '<pre>'; print_r($response); echo '</pre>'; echo "<br>";
 pg_close($db);
 ?>
