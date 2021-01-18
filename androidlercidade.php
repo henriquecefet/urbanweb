@@ -20,6 +20,8 @@ while($row = pg_fetch_row($ret)) {
    $cidade["longitude"] = $row[4];
    array_push($response["cidades"], $cidade);
 }
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
 echo json_encode($response);
 pg_close($db);
 
