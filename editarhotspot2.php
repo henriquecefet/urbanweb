@@ -18,7 +18,7 @@ include("conexao.php");
       $arlivre = t;
    }
    $sql =<<<EOF
-      UPDATE urban.hotspot set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem', linksite =  '$site', 'ar-livre' = $arlivre where idhotspot= $idhotspot;
+      UPDATE urban.hotspot set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem', linksite =  '$site', [ar-livre] = $arlivre where idhotspot= $idhotspot;
 EOF;
    $ret = pg_query($db, $sql);
    if(!$ret) {
