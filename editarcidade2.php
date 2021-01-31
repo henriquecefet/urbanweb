@@ -7,8 +7,10 @@ include("conexao.php");
    $latitude = $_REQUEST["latitude"];
    $longitude = $_REQUEST["longitude"];
    $imagem = $_REQUEST["linkimagem"];
+   $estado = $_REQUEST["estado"];
+   $pais = $_REQUEST["pais"];
    $sql =<<<EOF
-      UPDATE urban.cidade set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem'  where idcidade= $idcidade;
+      UPDATE urban.cidade set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem', estado = '$estado' , pais = '$pais'  where idcidade= $idcidade;
 EOF;
    $ret = pg_query($db, $sql);
    if(!$ret) {

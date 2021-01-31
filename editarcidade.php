@@ -45,6 +45,10 @@ EOF;
                          echo "<input type='text' name='latitude' id='latitude' value='$row[3]'><br>";
                          echo "<p>Longitude:</p><br>";
                          echo "<input type='text' name='longitude' id='longitude' value='$row[4]'><br>";
+                         echo "<p>Estado:</p><br>";
+                         echo "<input type='text' name='estado' id='estado' value='$row[5]'><br>";
+                         echo "<p>País:</p><br>";
+                         echo "<input type='text' name='pais' id='pais' value='$row[6]'><br>";
                          echo "<input type='hidden' value='$idcidade' name='cidade' id='cidade'>";
                          break;
                       }
