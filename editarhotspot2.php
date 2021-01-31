@@ -11,10 +11,14 @@ include("conexao.php");
    $site = $_REQUEST["site"];
    $idcidade = $_REQUEST["idcidade"];
    $arlivre = $_REQUEST["arlivre"];
-   echo isset($arlivre);
-   echo $arlivre;
+   if(!isset($arlivre)||$arlivre==null){
+      $arlivre = f;
+   }
+   else{
+      $arlivre = t;
+   }
    $sql =<<<EOF
-      UPDATE urban.hotspot set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem', linksite =  '$site' where idhotspot= $idhotspot;
+      UPDATE urban.hotspot set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem', linksite =  '$site', ar-livre = $arlivre where idhotspot= $idhotspot;
 EOF;
    $ret = pg_query($db, $sql);
    if(!$ret) {
@@ -22,6 +26,6 @@ EOF;
       exit;
    } else {
       echo "Record updated successfully\n";
-      //header('Location: listahotspots.php?id='.$idcidade);
+      header('Location: listahotspots.php?id='.$idcidade);
    }
 ?>
