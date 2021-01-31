@@ -9,11 +9,13 @@ include("conexao.php");
      $latitude = $_REQUEST["latitude"];
      $longitude = $_REQUEST["longitude"];
      $imagem = $_REQUEST["linkimagem"];
+     $estado = $_REQUEST["estado"];
+     $pais = $_REQUEST["pais"];
 }
 
    $sql =<<<EOF
-      INSERT INTO urban.cidade (idcidade ,nome ,latitude ,longitude ,imagem)
-      VALUES ($idcidade, '$nome', $latitude, $longitude, '$imagem' );
+      INSERT INTO urban.cidade (idcidade ,nome ,latitude ,longitude ,imagem, estado, pais)
+      VALUES ($idcidade, '$nome', $latitude, $longitude, '$imagem' ,'$estado','$pais');
 
 EOF;
 

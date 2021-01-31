@@ -44,6 +44,11 @@ $id = maxId('urban.cidade', 'idcidade')+1;
         <p>Longitude:</p><br>
         <input type="text" name="longitude" id="longitude" value=""><br>
         <br>
+        <p>Estado:</p><br>
+        <input type="text" name="estado" id="estado" value=""><br>
+        <p>País:</p><br>
+        <input type="text" name="pais" id="pais" value=""><br>
+        <br>
 
         <input type="submit" id="Submit" value="Submit">
       </form>
