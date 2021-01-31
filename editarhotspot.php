@@ -46,8 +46,14 @@ EOF;
                          echo "<input type='text' name='longitude' id='longitude' value='$row[4]'><br>";
                          echo "<p>Site:</p><br>";
                          echo "<input type='text' name='site' id='site' value='$row[5]'><br>";
-                         echo "<input type='checkbox' id='arlivre' name='arlivre' value='t'>";
-                         echo "<label for='arlivre'> Ar livre</label><br>";
+                         if($row[7]==t){
+                          echo "<input type='checkbox' id='arlivre' name='arlivre' value='t' checked>";
+                          echo "<label for='arlivre'> Ar livre</label><br>";
+                         }
+                         else{
+                          echo "<input type='checkbox' id='arlivre' name='arlivre' value='t'>";
+                          echo "<label for='arlivre'> Ar livre</label><br>";
+                         }
                          echo "<input type='hidden' value='$idhotspot' name='idhotspot' id='idhotspot'>";
                          echo "<input type='hidden' value='$row[6]' name='idcidade' id='idcidade'>";
                       
