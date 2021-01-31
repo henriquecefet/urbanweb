@@ -10,6 +10,9 @@ include("conexao.php");
    $imagem = $_REQUEST["linkimagem"];
    $site = $_REQUEST["site"];
    $idcidade = $_REQUEST["idcidade"];
+   $arlivre = $_REQUEST["arlivre"];
+   echo isset($arlivre);
+   echo $arlivre;
    $sql =<<<EOF
       UPDATE urban.hotspot set nome = '$nome', latitude = $latitude, longitude = $longitude, imagem = '$imagem', linksite =  '$site' where idhotspot= $idhotspot;
 EOF;
@@ -19,6 +22,6 @@ EOF;
       exit;
    } else {
       echo "Record updated successfully\n";
-      header('Location: listahotspots.php?id='.$idcidade);
+      //header('Location: listahotspots.php?id='.$idcidade);
    }
 ?>
