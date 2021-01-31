@@ -11,11 +11,18 @@ include("conexao.php");
      $longitude = $_REQUEST["longitude"];
      $imagem = $_REQUEST["linkimagem"];
      $site= $_REQUEST["site"];
+     $arlivre = $_REQUEST["arlivre"];
+     if(!isset($arlivre)||$arlivre==null){
+        $arlivre = f;
+     }
+     else{
+        $arlivre = t;
+     }
    }
 
    $sql =<<<EOF
-      INSERT INTO urban.hotspot (idhotspot, idcidade ,nome ,latitude ,longitude ,imagem, linksite)
-      VALUES ($idhotspot, $idcidade, '$nome', $latitude, $longitude, '$imagem', '$site' );
+      INSERT INTO urban.hotspot (idhotspot, idcidade ,nome ,latitude ,longitude ,imagem, linksite, "ar-livre")
+      VALUES ($idhotspot, $idcidade, '$nome', $latitude, $longitude, '$imagem', '$site', '$arlivre' );
 
 EOF;
 
