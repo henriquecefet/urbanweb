@@ -43,8 +43,8 @@ $id = maxId("urban.hotspot", "idhotspot")+1;
         <p>Site:</p><br>
         <input type="text" name="site" id="site" value=""><br>
         <br>
-        <input type="checkbox" id="arlivre" name="arlivre" value="t">;
-        <label for="arlivre"> Ar livre</label><br>;
+        <input type="checkbox" id="arlivre" name="arlivre" value="t">
+        <label for="arlivre"> Ar livre</label><br>
         <input type="hidden" value="<?php echo $_GET['id']; ?>" name="cidade" id="cidade">
         <input type="submit" id="Submit" value="Submit">
       </form>
