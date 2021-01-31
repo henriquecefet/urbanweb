@@ -23,7 +23,6 @@ include("conexao.php");
    $sql =<<<EOF
       INSERT INTO urban.hotspot (idhotspot, idcidade ,nome ,latitude ,longitude ,imagem, linksite, "ar-livre")
       VALUES ($idhotspot, $idcidade, '$nome', $latitude, $longitude, '$imagem', '$site', '$arlivre' );
-
 EOF;
 
    $ret = pg_query($db, $sql);
